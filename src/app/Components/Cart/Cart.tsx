@@ -22,7 +22,7 @@ import { useDocumentTitle } from "../../Core/CustomHooks/useDocumentTitle";
 interface CartProps {}
 
 const Cart: React.FC<CartProps> = () => {
-  useDocumentTitle("Cart")
+  useDocumentTitle("Cart");
   const dispatch = useDispatch();
   const cartItem = useSelector(CartsSelectors.selectAll);
   const history = useHistory();
@@ -77,11 +77,13 @@ const Cart: React.FC<CartProps> = () => {
               ))}
             </Grid>
           </div>
-          <div className={styles.grandTotal}>
-            <h3>Grand Total</h3>
-            <h3>{numberFormat(grandTotal)}</h3>
-          </div>
         </>
+      )}
+      {cartItem.length !== 0 && (
+        <div className={styles.grandTotal}>
+          <h3>Grand Total</h3>
+          <h3>{numberFormat(grandTotal)}</h3>
+        </div>
       )}
     </div>
   );
