@@ -1,7 +1,6 @@
 import React, { Fragment, Suspense } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { HashRouter, Redirect, Route, Switch } from "react-router-dom";
-import CircularProgress from "@mui/material/CircularProgress";
 import { ToastContainer } from "react-toastify";
 import { RootState, storeConfig } from "./app/Redux/storeConfigurations";
 import { CssBaseline, ThemeProvider } from "@mui/material";
@@ -9,6 +8,7 @@ import { lightTheme, darkTheme } from "./theme/theme";
 import Navbar from "./app/ui-componets/Navbar";
 import Authentication from "./app/Core/Authentication";
 import Routes, { RoutesProps } from "./app/Core/Routes";
+import Loader from "./app/ui-componets/Loader";
 
 const Cart = React.lazy(() => import("./app/Components/Cart/Cart"));
 
@@ -31,7 +31,7 @@ function AppRouter() {
         <CssBaseline enableColorScheme />
         <HashRouter>
           <Navbar />
-          <Suspense fallback={<CircularProgress />}>
+          <Suspense fallback={<Loader />}>
             <ToastContainer className="unselectable" />
             <Switch>
               <Route path="/" component={LoginPage} exact={true} />
@@ -61,7 +61,7 @@ const NestedSwitch = () => {
         <span className="root">
           <span>
             <main className="app-main">
-              <Suspense fallback={<CircularProgress />}>
+              <Suspense fallback={<Loader />}>
                 <Route
                   path="/landing"
                   render={(props) => (
