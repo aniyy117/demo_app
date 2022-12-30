@@ -1,0 +1,79 @@
+{
+  "name": "demo-app",
+  "version": "0.1.0",
+  "homepage": "https://aniyy117.github.io/",
+  "private": true,
+  "dependencies": {
+    "@date-io/moment": "^2.16.1",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@mui/icons-material": "^5.10.9",
+    "@mui/lab": "^5.0.0-alpha.108",
+    "@mui/material": "^5.10.9",
+    "@mui/styles": "^5.10.10",
+    "@mui/x-data-grid": "^5.17.12",
+    "@mui/x-data-grid-generator": "^5.17.15",
+    "@mui/x-date-pickers": "^5.0.8",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.21.1",
+    "formik": "^2.2.1",
+    "gh-pages": "^4.0.0",
+    "lodash": "^4.17.19",
+    "material-design-icons": "^3.0.1",
+    "material-ui-core": "^5.0.1",
+    "material-ui-search-bar": "^1.0.0",
+    "moment": "^2.29.4",
+    "node-sass": "^4.14.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "5.0.1",
+    "react-toastify": "^5.5.0",
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "typescript": "^4.8.4",
+    "web-vitals": "^2.1.4",
+    "yup": "^0.28.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "build:nosourcemap": "GENERATE_SOURCEMAP=false react-scripts build",
+    "build:maxspace": "react-scripts --max_old_space_size=3049 build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.01%",
+      "not dead"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@reduxjs/toolkit": "^1.4.0",
+    "@types/jest": "^27.5.2",
+    "@types/lodash": "^4.14.149",
+    "@types/material-ui": "^0.21.12",
+    "@types/node": "^16.11.65",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "@types/react-redux": "^7.1.7",
+    "@types/react-router-dom": "^5.1.3",
+    "@types/redux-logger": "^3.0.7",
+    "@types/yup": "^0.26.32"
+  }
+}

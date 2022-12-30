@@ -1,0 +1,35 @@
+.full-height {
+    height: 100vh;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.code {
+    border-right: 2px solid;
+    font-size: 2.6rem;
+    padding: 0 1.5rem 0 1.5rem;
+    text-align: center;
+}
+
+.message {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.goHomeLink {
+    margin-top: 1rem;
+}

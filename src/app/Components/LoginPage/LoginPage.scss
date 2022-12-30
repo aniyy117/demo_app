@@ -1,0 +1,21 @@
+.login-form{
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+}
+
+.signup{
+    text-align: center;
+
+    .signup-link{
+        color: #42A5F5;
+        font-weight: bold;
+    }
+}
