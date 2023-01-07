@@ -2,15 +2,15 @@ import { createSlice } from "@reduxjs/toolkit";
 import { AUTH } from "../../services/auth";
 
 const initialState = {
-    darkTheme: AUTH.theme ? AUTH.theme : false,
+  darkTheme: AUTH.theme ? AUTH.theme : true,
 };
 
-const  { actions, reducer } = createSlice({
+const { actions, reducer } = createSlice({
   name: "theme",
   initialState,
   reducers: {
     toggleTheme: (state) => {
-      AUTH.updateTheme(!state.darkTheme); 
+      AUTH.updateTheme(!state.darkTheme);
       state.darkTheme = !state.darkTheme;
     },
   },
@@ -18,7 +18,4 @@ const  { actions, reducer } = createSlice({
 
 export const { toggleTheme } = actions;
 
-export {
-    reducer as ThemeReducer,
-    initialState as ThemeReducerInit,
-};
+export { reducer as ThemeReducer, initialState as ThemeReducerInit };

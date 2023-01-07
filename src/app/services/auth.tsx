@@ -34,9 +34,14 @@ class authenticate {
         (user: any) =>
           user.user_name === user_name && user.password === password
       );
+
+      console.log(checkingExistingUser);
       setTimeout(() => {
         if (checkingExistingUser) {
-          setItems.call(sessionStorage, obj);
+          setItems.call(sessionStorage, {
+            ...obj,
+            email: checkingExistingUser.email,
+          });
           window.location.replace("/#/landing");
           resolve(true);
         }
@@ -67,6 +72,13 @@ class authenticate {
 
   get isLoggedIn() {
     return this.getItemSS("user_name");
+  }
+
+  get user_name() {
+    return this.getItemSS("user_name");
+  }
+  get email() {
+    return this.getItemSS("email");
   }
 
   get theme() {
